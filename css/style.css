@@ -1,0 +1,125 @@
+:root {
+  /* Light Mode Colors */
+  --primary-light: #4fcde8;
+  --bg-light: #ffffff;
+
+  /* Dark Mode Colors */
+  --primary-dark: #4b8d9c;
+  --bg-dark: #1a1a1a;
+}
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  font-family: "B612", sans-serif;
+  background: transparent;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  gap: 20px;
+}
+
+.nav-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.search-icon {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero-bg.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-content {
+  margin-bottom: 100px;
+}
+
+.hero-content h1 {
+  font-family: "B612", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #ff6b00;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+}
+
+.btn-outline-light {
+  border: 2px solid white;
+  padding: 12px 30px;
+  border-radius: 5px;
+}
+
+.category-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0 50px;
+}
+
+.icon-item {
+  text-align: center;
+  color: white;
+}
+
+.icon-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.icon-item span {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
