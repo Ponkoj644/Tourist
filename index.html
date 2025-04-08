@@ -13,81 +13,162 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Tourist</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tour List</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Destinations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tour Page</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-          </ul>
-          <div class="nav-right">
-            <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+    <!-- Header Start -->
+    <header>
+      <!-- Navigation Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Tourist</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tour List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tour Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+            </ul>
+            <div class="nav-right">
+              <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero">
+      <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroSlider"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroSlider"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroSlider"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+            style="background-image: url('./images/hero_slide_1.jpg')"
+          >
+            <div class="carousel-content">
+              <h1>Seychelles</h1>
+              <p>Etiam porta sem malesuada magna mollis</p>
+              <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Want a personal tour</a>
+                <a href="#" class="btn btn-outline-light">Choose tour</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="carousel-item"
+            style="background-image: url('./images/hero_slide_2.jpg')"
+          >
+            <div class="carousel-content">
+              <h1>Maldives</h1>
+              <p>Discover paradise on Earth</p>
+              <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Want a personal tour</a>
+                <a href="#" class="btn btn-outline-light">Choose tour</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="carousel-item"
+            style="background-image: url('./images/hero_slide_3.jpg')"
+          >
+            <div class="carousel-content">
+              <h1>Santorini</h1>
+              <p>Experience Mediterranean magic</p>
+              <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Want a personal tour</a>
+                <a href="#" class="btn btn-outline-light">Choose tour</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
       <div class="container">
-        <div class="hero-content">
-          <h1>Seychelles</h1>
-          <p>Etiam porta sem malesuada magna mollis</p>
-          <div class="hero-buttons">
-            <a href="#" class="btn btn-primary">Want a personal tour</a>
-            <a href="#" class="btn btn-outline-light">Choose tour</a>
-          </div>
-        </div>
         <div class="category-icons">
           <div class="icon-item">
-            <img src="images/wedding.png" alt="Wedding" />
+            <img src="./images/Ski_tours.jpg" alt="Ski" />
+            <span>Ski tours</span>
+          </div>
+          <div class="icon-item">
+            <img src="./images/Excursion.jpg" alt="Excursion" />
+            <span>Excursion tours</span>
+          </div>
+          <div class="icon-item">
+            <img src="./images/Shop.jpg" alt="Shop" />
+            <span>Shop tours</span>
+          </div>
+          <div class="icon-item">
+            <img src="./images/SPA.jpg" alt="SPA" />
+            <span>SPA tours</span>
+          </div>
+          <div class="icon-item">
+            <img src="./images/Wedding.jpg" alt="Wedding" />
             <span>Wedding tours</span>
           </div>
           <div class="icon-item">
-            <img src="images/weekend.png" alt="Weekend" />
+            <img src="./images/Weekebd.jpg" alt="Weekend" />
             <span>Tours weekend</span>
           </div>
           <div class="icon-item">
-            <img src="images/islands.png" alt="Islands" />
+            <img src="./images/Islands.jpg" alt="Islands" />
             <span>Tours to islands</span>
           </div>
           <div class="icon-item">
-            <img src="images/cruise.png" alt="Cruises" />
+            <img src="./images/Cruises.jpg" alt="Cruises" />
             <span>Cruises</span>
           </div>
           <div class="icon-item">
-            <img src="images/premium.png" alt="Premium" />
+            <img src="./images/Premium.jpg" alt="Premium" />
             <span>Premium</span>
           </div>
         </div>
       </div>
     </section>
+    <!-- Hero Section End -->
 
     <!-- Add Font Awesome for icons -->
     <link
@@ -96,5 +177,7 @@
     />
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
   </body>
 </html>

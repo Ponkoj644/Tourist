@@ -15,11 +15,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Navbar styles */
 .navbar {
   font-family: "B612", sans-serif;
   background: transparent;
   padding: 20px 0;
   transition: all 0.3s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .navbar.scrolled {
@@ -29,6 +35,7 @@ body {
 .navbar-brand {
   font-size: 2rem;
   font-weight: bold;
+  color: white !important;
 }
 
 .navbar-nav {
@@ -41,34 +48,98 @@ body {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
+  color: white !important;
+  opacity: 1;
+  position: relative;
 }
 
-.search-icon {
-  color: white;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile menu styles */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .navbar-toggler {
+    border-color: white;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+.carousel-item.active h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-item p {
+  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
-  margin-left: 20px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease 0.2s;
 }
 
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/hero-bg.jpg") no-repeat center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  color: white;
+.carousel-item.active p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.hero-content {
-  margin-bottom: 100px;
+.carousel-item .hero-buttons {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease 0.4s;
 }
 
-.hero-content h1 {
-  font-family: "B612", sans-serif;
-  font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.carousel-item.active .hero-buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
 .hero-content p {
@@ -99,27 +170,184 @@ body {
 
 .category-icons {
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  padding: 0 50px;
+  overflow-x: auto;
+  padding: 20px 0;
+  gap: 30px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.category-icons::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .icon-item {
+  flex: 0 0 auto;
   text-align: center;
   color: white;
+  min-width: 100px;
+  transition: transform 0.3s ease;
+}
+
+.icon-item:hover {
+  transform: translateY(-5px);
 }
 
 .icon-item img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
+.icon-item span {
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Optional: Add gradient indicators for scroll */
+@media (max-width: 991px) {
+  .category-icons::before,
+  .category-icons::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .category-icons::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+  }
+
+  .category-icons::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+  }
+}
 .icon-item span {
   display: block;
   font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators {
+  right: 30px;
+  left: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: translateY(-50%);
+  top: 50%;
+  width: auto;
+  z-index: 5;
+}
+
+/* Adjust indicators for medium and small screens */
+@media (max-width: 991px) {
+  .carousel-indicators {
+    right: 15px;
+  }
+
+  .carousel-content {
+    max-width: 100%;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-indicators {
+    right: 10px;
+    gap: 10px;
+  }
+
+  .carousel-content {
+    padding: 0 30px;
+  }
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+#heroSlider {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+.carousel-content h1,
+p {
+  color: white;
+}
+
+.category-icons {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  z-index: 3;
 }
