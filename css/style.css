@@ -11,6 +11,11 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* General styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -154,6 +159,19 @@ body {
   display: flex;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 80%;
+  }
+}
 
 .btn-primary {
   background: #ff6b00;
@@ -210,8 +228,7 @@ body {
 
 /* Optional: Add gradient indicators for scroll */
 @media (max-width: 991px) {
-  .category-icons::before,
-  .category-icons::after {
+  .category-icons::before {
     content: "";
     position: absolute;
     top: 0;
@@ -351,3 +368,341 @@ p {
   right: 0;
   z-index: 3;
 }
+
+@media (max-width: 991px) {
+  .category-icons {
+    bottom: 0;
+  }
+}
+
+/* Popular Section Styles */
+.popular-section {
+  padding: 120px 0 60px;
+  background: #000;
+  color: white;
+  overflow-x: hidden; /* Add this */
+}
+
+.popular-slider {
+  margin: 0; /* Remove negative margins */
+  width: 100%;
+}
+
+.tour-card {
+  padding: 0 15px; /* Change margin to padding */
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .popular-section {
+    padding: 50px 20px; /* Adjust padding */
+  }
+
+  .tour-card {
+    padding: 0 10px; /* Reduce padding on mobile */
+  }
+
+  .container {
+    /* max-width: 100%; */
+    /* padding: 0; */
+  }
+}
+
+/* Update slider navigation position for mobile */
+@media (max-width: 991px) {
+  .popular-slider .slick-prev {
+    left: 5px; /* Move arrows closer */
+  }
+  .popular-slider .slick-next {
+    right: 5px;
+  }
+}
+
+.tour-image {
+  height: 100%;
+  position: relative;
+}
+
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.tour-image::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.tour-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  color: white;
+}
+
+.rating {
+  color: #ffc107;
+}
+
+.rating span {
+  color: white;
+  margin-left: 5px;
+}
+
+.tour-content h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.badge + .badge {
+  left: 90px;
+}
+
+.tour-info {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.tour-info i {
+  margin-right: 5px;
+}
+
+@media (max-width: 991px) {
+  .popular-section {
+    padding: 80px 0 40px;
+  }
+}
+
+/* Ensure proper spacing between cards */
+.popular-section .row {
+  margin: 0 -15px;
+}
+
+.popular-section [class*="col-"] {
+  padding: 0 15px;
+}
+.section-header .text-primary {
+  color: #ff6b00 !important;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.btn-outline-light {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-outline-light:hover {
+  background: #ff6b00;
+  border-color: #ff6b00;
+}
+
+.carousel-controls .btn-prev,
+.carousel-controls .btn-next {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.carousel-controls .btn-prev:hover,
+.carousel-controls .btn-next:hover {
+  background: #ff6b00;
+  border-color: #ff6b00;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+}
+
+.popular-slider {
+  /* margin: 0 -15px; */
+  padding: 20px 0;
+}
+
+.popular-slider .tour-card {
+  margin: 15px;
+}
+
+.popular-slider .slick-dots {
+  bottom: -40px;
+}
+
+.popular-slider .slick-dots li button:before {
+  color: white;
+}
+
+.popular-slider .slick-dots li.slick-active button:before {
+  color: #ff6b00;
+}
+
+.popular-slider .slick-prev,
+.popular-slider .slick-next {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.popular-slider .slick-prev {
+  left: -50px;
+}
+
+.popular-slider .slick-next {
+  right: -50px;
+}
+
+.popular-slider .slick-prev:before,
+.popular-slider .slick-next:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.popular-slider .slick-prev:before {
+  content: "\f104"; /* Font Awesome left arrow */
+}
+
+.popular-slider .slick-next:before {
+  content: "\f105"; /* Font Awesome right arrow */
+}
+
+.popular-slider .slick-prev:hover,
+.popular-slider .slick-next:hover {
+  background: #ff6b00;
+  border-color: #ff6b00;
+}
+
+@media (max-width: 991px) {
+  .popular-slider .slick-prev {
+    left: -15px;
+  }
+  .popular-slider .slick-next {
+    right: -15px;
+  }
+}
+
+.popular-slider .slick-prev:before,
+.popular-slider .slick-next:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.popular-slider .slick-prev:before {
+  content: "\f104";
+}
+
+.popular-slider .slick-next:before {
+  content: "\f105";
+}
+
+/* Features Section CSS Start */
+.features-section {
+  background: #000;
+  padding: 60px 0;
+}
+
+.features-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.feature-card {
+  position: relative;
+  padding-left: 167px;
+  max-width: 388px;
+  height: 134px;
+  width: 30%;
+  margin-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.feature-image {
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+}
+
+.feature-image img {
+  height: 100%;
+  display: block;
+  float: left;
+}
+
+.feature-content {
+  color: white;
+}
+
+.feature-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.feature-content p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+  .features-wrapper {
+    overflow: hidden;
+    overflow-x: scroll;
+    gap: 40px;
+    flex-wrap: nowrap;
+  }
+}
+/* Features Section CSS End */
