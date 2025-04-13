@@ -1,399 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tourist - Your Travel Companion</title>
 
-        <!-- Add Font Awesome for icons -->
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      />
-    <!-- Bootstrap 5 CSS CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tourist - Your Travel Companion</title>
 
-    <!-- Slick Slider CDN -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Header Start -->
-    <header>
-      <!-- Navigation Bar -->
+  <!-- Slick Slider CDN -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">Tourist</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Tour List</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Destinations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Tour Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-            </ul>
-            <div class="nav-right">
-              <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header>
+    <!-- Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Tourist</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tour List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tour Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+          <div class="nav-right">
+            <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header End -->
+
+  <!-- Hero Section Start -->
+  <section class="hero">
+    <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('./images/hero_slide_1.jpg')">
+          <div class="carousel-content">
+            <h1>Seychelles</h1>
+            <p>Etiam porta sem malesuada magna mollis</p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Want a personal tour</a>
+              <a href="#" class="btn btn-outline-light">Choose tour</a>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- Header End -->
 
-    <!-- Hero Section Start -->
-    <section class="hero">
-      <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
-        <!-- Carousel Indicators -->
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#heroSlider"
-            data-bs-slide-to="0"
-            class="active"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroSlider"
-            data-bs-slide-to="1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#heroSlider"
-            data-bs-slide-to="2"
-          ></button>
+        <div class="carousel-item" style="background-image: url('./images/hero_slide_2.jpg')">
+          <div class="carousel-content">
+            <h1>Maldives</h1>
+            <p>Discover paradise on Earth</p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Want a personal tour</a>
+              <a href="#" class="btn btn-outline-light">Choose tour</a>
+            </div>
+          </div>
         </div>
 
-        <!-- Carousel Items -->
-        <div class="carousel-inner">
-          <div
-            class="carousel-item active"
-            style="background-image: url('./images/hero_slide_1.jpg')"
-          >
-            <div class="carousel-content">
-              <h1>Seychelles</h1>
-              <p>Etiam porta sem malesuada magna mollis</p>
-              <div class="hero-buttons">
-                <a href="#" class="btn btn-primary">Want a personal tour</a>
-                <a href="#" class="btn btn-outline-light">Choose tour</a>
+        <div class="carousel-item" style="background-image: url('./images/hero_slide_3.jpg')">
+          <div class="carousel-content">
+            <h1>Santorini</h1>
+            <p>Experience Mediterranean magic</p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Want a personal tour</a>
+              <a href="#" class="btn btn-outline-light">Choose tour</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="category-icons">
+        <div class="icon-item">
+          <img src="./images/Ski_tours.jpg" alt="Ski" />
+          <span>Ski tours</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/Excursion.jpg" alt="Excursion" />
+          <span>Excursion tours</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/Shop.jpg" alt="Shop" />
+          <span>Shop tours</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/SPA.jpg" alt="SPA" />
+          <span>SPA tours</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/Wedding.jpg" alt="Wedding" />
+          <span>Wedding tours</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/Weekebd.jpg" alt="Weekend" />
+          <span>Tours weekend</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/Islands.jpg" alt="Islands" />
+          <span>Tours to islands</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/Cruises.jpg" alt="Cruises" />
+          <span>Cruises</span>
+        </div>
+        <div class="icon-item">
+          <img src="./images/Premium.jpg" alt="Premium" />
+          <span>Premium</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section End -->
+
+  <main>
+    <!-- Popular Section Start -->
+    <section class="popular-section">
+      <div class="container">
+        <div class="row">
+
+          <div class="section_header">
+            <div class="section_header_left">
+              <span class="section_subtitle">POPULARY</span>
+              <h2 class="section_title">Most popular <br /> holiday destinations</h2>
+            </div>
+
+            <div class="section_header_right">
+              <div class="d-flex align-items-center gap-4">
+                <a href="#" class="btn btn-outline-light px-4 rounded-pill">View all tours</a>
+                <div class="carousel-controls d-flex gap-2">
+                  <button class="btn-prev" data-bs-target="#popularCarousel" data-bs-slide="prev">
+                    <i class="fas fa-arrow-left"></i>
+                  </button>
+                  <button class="btn-next" data-bs-target="#popularCarousel" data-bs-slide="next">
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="slick-list">
+      </div>
+        <div class="popular-slider slick-track">
+          <div class="tour-card slider_item slick-slide">
+            <div class="tour-image slider_item ">
+              <span class="badge bg-danger">20% off</span>
+              <span class="badge bg-success">New</span>
+              <img src="./images/popular_slide_1.jpg" alt="Islands Tour" />
+              <div class="tour-content slider_item_content">
+                <div class="rating mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <span>(2 Reviews)</span>
+                </div>
+                <h3>A tour of the Islands | $3,500 $3,880</h3>
+                <p>A wonderful serenity has taken possession of my entire soul...</p>
+                <div class="tour-info">
+                  <span><i class="far fa-clock"></i> 7 days</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div
-            class="carousel-item"
-            style="background-image: url('./images/hero_slide_2.jpg')"
-          >
-            <div class="carousel-content">
-              <h1>Maldives</h1>
-              <p>Discover paradise on Earth</p>
-              <div class="hero-buttons">
-                <a href="#" class="btn btn-primary">Want a personal tour</a>
-                <a href="#" class="btn btn-outline-light">Choose tour</a>
+          <div class="tour-card slider_item slick-slide">
+            <div class="tour-image slider_item">
+              <span class="badge bg-danger">20% off</span>
+              <img src="./images/popular_slide_2.jpg" alt="Japan Tour" />
+              <div class="tour-content slider_item_content">
+                <div class="rating mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(5.0)</span>
+                </div>
+                <h3>Autumn in Japan | $3,500 $3,880</h3>
+                <p>It showcases the authentic gems of the country...</p>
+                <div class="tour-info">
+                  <span><i class="far fa-clock"></i> 5 days</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div
-            class="carousel-item"
-            style="background-image: url('./images/hero_slide_3.jpg')"
-          >
-            <div class="carousel-content">
-              <h1>Santorini</h1>
-              <p>Experience Mediterranean magic</p>
-              <div class="hero-buttons">
-                <a href="#" class="btn btn-primary">Want a personal tour</a>
-                <a href="#" class="btn btn-outline-light">Choose tour</a>
+          <div class="tour-card slider_item slick-slide">
+            <div class="tour-image">
+              <img src="./images/popular_slide_3.jpg" alt="Japan Tour" />
+              <div class="tour-content slider_item_content">
+                <div class="rating mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(5.0)</span>
+                </div>
+                <h3>Autumn in Japan | $3,500 $3,880</h3>
+                <p>It showcases the authentic gems of the country...</p>
+                <div class="tour-info">
+                  <span><i class="far fa-clock"></i> 5 days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card slider_item slick-slide">
+            <div class="tour-image">
+              <img src="./images/popular_slide_4.jpg" alt="Japan Tour" />
+              <div class="tour-content slider_item_content">
+                <div class="rating mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span>(5.0)</span>
+                </div>
+                <h3>Autumn in Japan | $3,500 $3,880</h3>
+                <p>It showcases the authentic gems of the country...</p>
+                <div class="tour-info">
+                  <span><i class="far fa-clock"></i> 5 days</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+    </section>
+    <!-- Popular Section End -->
+    <!-- Features Section Start -->
+    <section class="features-section">
       <div class="container">
-        <div class="category-icons">
-          <div class="icon-item">
-            <img src="./images/Ski_tours.jpg" alt="Ski" />
-            <span>Ski tours</span>
+        <div class="row">
+          <div class="col-12 col-md-6  col-lg-4">
+            <div class="feature-card">
+              <div class="feature-image">
+                <img src="./images/featre-img-1.avif" alt="Any route" class="img-fluid" />
+              </div>
+              <div class="feature-content">
+                <h3>Any route</h3>
+                <p>We will help you to make any route for travel with transportation</p>
+                <button class="btn-link"><a href=""></a>Your destination <i class="fa-solid fa-plane"></i> </button>
+              </div>
+            </div>
           </div>
-          <div class="icon-item">
-            <img src="./images/Excursion.jpg" alt="Excursion" />
-            <span>Excursion tours</span>
+
+          <div class="col-12 col-md-6  col-lg-4">
+            <div class="feature-card">
+              <div class="feature-image">
+                <img src="./images/feature-img-2.jpg" alt="Your dream" class="img-fluid" />
+              </div>
+              <div class="feature-content">
+                <h3>Your dream</h3>
+                <p>Your dreams of an unforgettable journey can come true with us</p>
+                <button class="btn-link"><a href=""></a>Our Plasure <i class="fa-solid fa-handshake"></i> </button>
+              </div>
+            </div>
           </div>
-          <div class="icon-item">
-            <img src="./images/Shop.jpg" alt="Shop" />
-            <span>Shop tours</span>
-          </div>
-          <div class="icon-item">
-            <img src="./images/SPA.jpg" alt="SPA" />
-            <span>SPA tours</span>
-          </div>
-          <div class="icon-item">
-            <img src="./images/Wedding.jpg" alt="Wedding" />
-            <span>Wedding tours</span>
-          </div>
-          <div class="icon-item">
-            <img src="./images/Weekebd.jpg" alt="Weekend" />
-            <span>Tours weekend</span>
-          </div>
-          <div class="icon-item">
-            <img src="./images/Islands.jpg" alt="Islands" />
-            <span>Tours to islands</span>
-          </div>
-          <div class="icon-item">
-            <img src="./images/Cruises.jpg" alt="Cruises" />
-            <span>Cruises</span>
-          </div>
-          <div class="icon-item">
-            <img src="./images/Premium.jpg" alt="Premium" />
-            <span>Premium</span>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="feature-card">
+              <div class="feature-image">
+                <img src="./images/feature-img-3.webp" alt="Our guarantee" class="img-fluid" />
+              </div>
+              <div class="feature-content">
+                <h3>Our guarantee</h3>
+                <p>We guarantee you an unforgettable journey and a lot of impressions</p>
+                <button class="btn-link"><a href=""></a>Share Your Experience <i class="fa-solid fa-share-nodes"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Hero Section End -->
 
-    <main>
-      <!-- Popular Section Start -->
-      <section class="popular-section">
-        <div class="container">
-            <div class="section-header d-flex justify-content-between align-items-start mb-4">
-                <div>
-                    <span class="text-uppercase fw-bold text-primary">POPULARY</span>
-                    <h2 class="mt-2">Most popular <br/>  holiday destinations</h2>
-                </div>
-                <div class="d-flex align-items-center gap-4">
-                    <a href="#" class="btn btn-outline-light px-4 rounded-pill">View all tours</a>
-                    <div class="carousel-controls d-flex gap-2">
-                        <button class="btn-prev" data-bs-target="#popularCarousel" data-bs-slide="prev">
-                            <i class="fas fa-arrow-left"></i>
-                        </button>
-                        <button class="btn-next" data-bs-target="#popularCarousel" data-bs-slide="next">
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <!-- Features Section End -->
 
-            <div class="popular-slider">
-                <div class="tour-card">
-                    <div class="tour-image">
-                        <span class="badge bg-danger">20% off</span>
-                        <span class="badge bg-success">New</span>
-                        <img src="./images/popular_slide_1.jpg" alt="Islands Tour" />
-                        <div class="tour-content">
-                            <div class="rating mb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(4.5)</span>
-                            </div>
-                            <h3>A tour of the Islands | $3,500 $3,880</h3>
-                            <p>A wonderful serenity has taken possession of my entire soul...</p>
-                            <div class="tour-info">
-                                <span><i class="far fa-clock"></i> 7 days</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tour-card">
-                    <div class="tour-image">
-                        <img src="./images/popular_slide_2.jpg" alt="Japan Tour" />
-                        <div class="tour-content">
-                            <div class="rating mb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>(5.0)</span>
-                            </div>
-                            <h3>Autumn in Japan | $3,500 $3,880</h3>
-                            <p>It showcases the authentic gems of the country...</p>
-                            <div class="tour-info">
-                                <span><i class="far fa-clock"></i> 5 days</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tour-card">
-                    <div class="tour-image">
-                        <img src="./images/popular_slide_2.jpg" alt="Japan Tour" />
-                        <div class="tour-content">
-                            <div class="rating mb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>(5.0)</span>
-                            </div>
-                            <h3>Autumn in Japan | $3,500 $3,880</h3>
-                            <p>It showcases the authentic gems of the country...</p>
-                            <div class="tour-info">
-                                <span><i class="far fa-clock"></i> 5 days</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-      <!-- Popular Section End -->
-
-      <!-- Features Section Start -->
-
-      <section class="features-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6  col-lg-4">
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="./images/featre-img-1.avif" alt="Any route" class="img-fluid" />
-                        </div>
-                        <div class="feature-content">
-                            <h3>Any route</h3>
-                            <p>We will help you to make any route for travel with transportation</p>
-                            <button class="btn-link"><a href=""></a>Your destination <i class="fa-solid fa-plane"></i> </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6  col-lg-4">
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="./images/feature-img-2.jpg" alt="Your dream" class="img-fluid"  />
-                        </div>
-                        <div class="feature-content">
-                            <h3>Your dream</h3>
-                            <p>Your dreams of an unforgettable journey can come true with us</p>
-                            <button class="btn-link"><a href=""></a>Our Plasure <i class="fa-solid fa-handshake"></i> </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="./images/feature-img-3.webp" alt="Our guarantee" class="img-fluid" />
-                        </div>
-                        <div class="feature-content">
-                            <h3>Our guarantee</h3>
-                            <p>We guarantee you an unforgettable journey and a lot of impressions</p>
-                            <button class="btn-link"><a href=""></a>Share Your Experience <i class="fa-solid fa-share-nodes"></i> </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </section>
-
-      <!-- Features Section End -->
-
-      <!-- Search Section Start -->
-      <section class="search-section d-none">
+    <!-- Search Section Start -->
+    <section class="search-section d-none">
       <div class="container">
-          <div class="search-wrapper">
-              <span class="text-uppercase fw-bold text-primary">SEARCH TOUR</span>
-              <h2>Ready to rest? We are ready<br>to help with the search</h2>
-              
-              <div class="search-form">
-                  <div class="search-input">
-                      <i class="fas fa-search"></i>
-                      <input type="text" placeholder="Keywords">
-                  </div>
-                  
-                  <div class="search-select">
-                      <select>
-                          <option value="">Any Activity</option>
-                          <option value="hiking">Hiking</option>
-                          <option value="swimming">Swimming</option>
-                          <option value="cultural">Cultural</option>
-                      </select>
-                  </div>
-  
-                  <div class="search-select">
-                      <select>
-                          <option value="">Any Destination</option>
-                          <option value="europe">Europe</option>
-                          <option value="asia">Asia</option>
-                          <option value="americas">Americas</option>
-                      </select>
-                  </div>
-  
-                  <div class="search-select">
-                      <select>
-                          <option value="">Any Duration</option>
-                          <option value="3-5">3-5 days</option>
-                          <option value="5-7">5-7 days</option>
-                          <option value="7-10">7-10 days</option>
-                      </select>
-                  </div>
-  
-                  <div class="search-date">
-                      <!-- <i class="far fa-calendar"></i> -->
-                      <input type="date">
-                  </div>
-  
-                  <button class="search-btn">
-                      <i class="fas fa-search"></i>
-                  </button>
-              </div>
+        <div class="search-wrapper">
+          <span class="text-uppercase fw-bold text-primary">SEARCH TOUR</span>
+          <h2>Ready to rest? We are ready<br>to help with the search</h2>
+
+          <div class="search-form">
+            <div class="search-input">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Keywords">
+            </div>
+
+            <div class="search-select">
+              <select>
+                <option value="">Any Activity</option>
+                <option value="hiking">Hiking</option>
+                <option value="swimming">Swimming</option>
+                <option value="cultural">Cultural</option>
+              </select>
+            </div>
+
+            <div class="search-select">
+              <select>
+                <option value="">Any Destination</option>
+                <option value="europe">Europe</option>
+                <option value="asia">Asia</option>
+                <option value="americas">Americas</option>
+              </select>
+            </div>
+
+            <div class="search-select">
+              <select>
+                <option value="">Any Duration</option>
+                <option value="3-5">3-5 days</option>
+                <option value="5-7">5-7 days</option>
+                <option value="7-10">7-10 days</option>
+              </select>
+            </div>
+
+            <div class="search-date">
+              <!-- <i class="far fa-calendar"></i> -->
+              <input type="date">
+            </div>
+
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
+        </div>
       </div>
-      </section>
+    </section>
     <!-- Search Section End -->
-    </main>
+  </main>
 
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Slick Slider JS -->
-    <!-- Before closing body tag -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    </script>
+  <!-- Slick Slider JS -->
+  <!-- Before closing body tag -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </script>
 
-    <!-- Custom JS -->
-    <script src="./js/main.js"></script>
-  </body>
+  <!-- Custom JS -->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
-
-
-
-
