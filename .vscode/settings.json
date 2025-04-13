@@ -1,0 +1,7 @@
+{
+    "[css]": {
+        "editor.defaultFormatter": null
+    },
+    "editor.formatOnSave": true,
+    "notebook.formatOnSave.enabled": true
+}

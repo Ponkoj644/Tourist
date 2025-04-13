@@ -433,196 +433,20 @@ p {
     bottom: 0;
   }
 }
+/* Hero Section Css End */
 
-/* Popular Section Styles */
+/* Popular Section Css Start */
 .popular-section {
+  background: #000;
   padding: 120px 0 60px;
-  background: #000;
-  color: white;
-  overflow-x: hidden; /* Add this */
-}
-
-.popular-slider {
-  margin: 0; /* Remove negative margins */
-  width: 100%;
-}
-
-.tour-card {
-  padding: 0 15px; /* Change margin to padding */
-  position: relative;
-  border-radius: 15px;
   overflow: hidden;
-  height: 400px;
-}
-
-@media (max-width: 768px) {
-  .popular-section {
-    padding: 50px 20px; /* Adjust padding */
-  }
-
-  .tour-card {
-    padding: 0 10px; /* Reduce padding on mobile */
-  }
-
-
-}
-
-/* Update slider navigation position for mobile */
-@media (max-width: 991px) {
-  .popular-slider .slick-prev {
-    left: 5px; /* Move arrows closer */
-  }
-  .popular-slider .slick-next {
-    right: 5px;
-  }
-}
-
-.tour-image {
-  height: 100%;
-  position: relative;
-}
-
-.tour-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.tour-image::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 70%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-}
-
-.tour-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 30px;
   color: white;
-}
-
-.rating {
-  color: #ffc107;
-}
-
-.rating span {
-  color: white;
-  margin-left: 5px;
-}
-
-.tour-content h3 {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-.badge {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 2;
-  padding: 8px 12px;
-  font-size: 12px;
-}
-
-.badge + .badge {
-  left: 90px;
-}
-
-.tour-info {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-.tour-info i {
-  margin-right: 5px;
-}
-
-@media (max-width: 991px) {
-  .popular-section {
-    padding: 80px 0 40px;
-  }
-}
-
-/* Ensure proper spacing between cards */
-.popular-section .row {
-  margin: 0 -15px;
-}
-
-.popular-section [class*="col-"] {
-  padding: 0 15px;
-}
-.section-header .text-primary {
-  color: #ff6b00 !important;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.section-header h2 {
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.btn-outline-light {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.btn-outline-light:hover {
-  background: #ff6b00;
-  border-color: #ff6b00;
-}
-
-.carousel-controls .btn-prev,
-.carousel-controls .btn-next {
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  background: transparent;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.carousel-controls .btn-prev:hover,
-.carousel-controls .btn-next:hover {
-  background: #ff6b00;
-  border-color: #ff6b00;
-}
-
-@media (max-width: 768px) {
-  .section-header {
-    flex-direction: column;
-    gap: 20px;
-    margin-left: 20px;
-  }
-
-  .section-header h2 {
-    font-size: 30px;
-  }
-}
-
-/* Popular Slider Css */
-.popular-section{
-  background: #000;
-  padding-bottom: 50px;
-  overflow: hidden;
-  padding-top: 60px;
 }
 
 .popular-section .section_header {
-  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
   margin-bottom: 45px;
 }
 
@@ -631,31 +455,30 @@ p {
 }
 
 .popular-section .section_subtitle {
- color: #ff7f00;
- font-weight: 900;
- text-transform: uppercase;
- letter-spacing: 1px;
- line-height: 1.4;
- margin-bottom: 5px; 
+  color: #ff7f00;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-bottom: 5px;
 }
 
-.popular-section .section_title{
+.popular-section .section_title {
   font-size: 40px;
   font-weight: 900;
 }
 
-.popular-section .section_header_right{
-  width: auto;
-  float: right;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-
-
+/* Popular Slider Section Styles Start */
 .popular-slider {
   padding: 20px 0;
+}
+
+.popular-section .popular-slider a{
+  transition: all 0.3s ease ;
+}
+
+.popular-section .popular-slider a:hover .tour-content h3{
+  color: #ff6b00;
 }
 
 .popular-section .slider_item {
@@ -667,20 +490,17 @@ p {
   overflow: visible;
 }
 
-
-
- .popular-section .slider_item_content {
+.popular-section .slider_item_content {
   padding: 30px 50px 30px;
-} 
+}
 
- .popular-section .slick-slider .slick-track,
-.popular-section .slick-slider .slick-list {
-  will-change: transform;
-} 
-
- .popular-slider .tour-card {
+.popular-slider .tour-card {
   margin: 15px;
-} 
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 400px;
+}
 
 .popular-slider .slick-dots {
   bottom: -40px;
@@ -694,7 +514,7 @@ p {
   color: #ff6b00;
 }
 
-.popular-slider .slick-prev,
+/* .popular-slider .slick-prev,
 .popular-slider .slick-next {
   width: 32px;
   height: 32px;
@@ -703,7 +523,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1;
   transition: all 0.3s ease;
-}
+} */
 
 .popular-slider .slick-prev {
   /* left: -50px; */
@@ -726,7 +546,7 @@ p {
 }
 
 .popular-slider .slick-next:before {
-  content: "\f105"; 
+  content: "\f105";
 }
 
 .popular-slider .slick-prev:hover,
@@ -735,41 +555,156 @@ p {
   border-color: #ff6b00;
 }
 
+.popular-section .tour-image {
+  height: 100%;
+  position: relative;
+}
 
+.popular-section .tour-card .badges {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
 
-.popular-slider .slick-prev:before,
-.popular-slider .slick-next:before {
-  font-family: "Font Awesome 6 Free";
+.popular-section .tour-card .badges span {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.popular-section .tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.popular-section .tour-image::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.popular-section .tour-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  color: white;
+}
+
+.popular-section .rating {
+  color: #ffc107;
+}
+
+.popular-section .rating span {
+  color: white;
+  margin-left: 5px;
+}
+
+.popular-section .tour-content h3 {
+  font-size: 28px;
   font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: all 0.2s linear;
+}
+
+.popular-section .tour-content p{
   font-size: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  font-style: italic;
+  margin-bottom: 18px;
+  line-height: 1.4;
 }
 
-.popular-slider .slick-prev:before {
-  content: "\f104";
+.popular-section .tour-info {
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.popular-slider .slick-next:before {
-  content: "\f105";
+.popular-section .tour-info i {
+  margin-right: 5px;
 }
 
-@media screen and (max-width: 991px)  {
-  .popular-section .section_header_left{
+.btn-outline-light {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-outline-light:hover {
+  background: #ff6b00;
+  border-color: #ff6b00;
+}
+
+.carousel-controls .btn-prev,
+.carousel-controls .btn-next {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.carousel-controls .btn-prev:hover,
+.carousel-controls .btn-next:hover {
+  background: #ff6b00;
+  border-color: #ff6b00;
+}
+
+@media screen and (max-width: 991px) {
+  .popular-section {
+    padding: 60px 0 30px;
+  }
+
+  .popular-section .section_header {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .popular-section .section_header_right {
     width: 100%;
   }
-  .popular-section .section_header_right{
-    position: relative;
-    clear: both;
-    right: auto;
+  .popular-section .section_header_left {
     width: 100%;
-    padding-left: 187px;
-    margin-top: 27px;
   }
 
   .popular-section .slider_item {
     width: 90vw;
   }
+}
 
-} 
+@media screen and (max-width: 767px) {
+  .popular-section .section_header .section_title {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .popular-section .tour-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .popular-section .tour-content p{
+    font-size: 16px;
+
+  }
+}
+/* Popular Section Css End */
 
 /* Features Section CSS Start */
 .features-section {
